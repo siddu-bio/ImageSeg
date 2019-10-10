@@ -21,7 +21,7 @@ for(i = 0; i < p; i++){
        close(c2);
        close(c3);
        close(c4);
-       print("Neuron Size:"+neuronsize+"")
+       print("Neuron Size:"+neuronsize+"");
        }
 }
 
