@@ -34,7 +34,7 @@ def parse_file(filename):
             data[2].append(size)
     result = list(zip(data[0],data[1],data[2])) 
     return result
-list_of_files = ["drg_con_nalcn_data","drg_pac_fam155a","drg_pac_nalcn","drg-con-fam_coloc_data"]
+list_of_files = []
 for file in list_of_files:
     data = pd.DataFrame(parse_file(file), columns = ["SlideID","PCC","size"])
     fname = file + ".xlsx"
