@@ -30,11 +30,12 @@ def parse_file(filename):
             data[1].append(pearsons)
         if line.startswith("Neuron Size:"):
             idx = line.find(":") + 1
-            size = [idx::]
-    result = list(zip(data[0],data[1])) 
+            size = line[idx::]
+            data[2].append(size)
+    result = list(zip(data[0],data[1],data[2])) 
     return result
 list_of_files = ["drg_con_nalcn_data","drg_pac_fam155a","drg_pac_nalcn","drg-con-fam_coloc_data"]
 for file in list_of_files:
-    data = pd.DataFrame(parse_file(file), columns = ["SlideID","PCC"])
+    data = pd.DataFrame(parse_file(file), columns = ["SlideID","PCC","size"])
     fname = file + ".xlsx"
     data.to_excel(fname)
