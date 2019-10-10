@@ -3,7 +3,7 @@ import re
 def parse_file(filename):
     fn = filename + ".txt" 
     file = open(fn)
-    data = [[],[]]
+    data = [[],[],[]]
     for line in file:
         if line.startswith("Image A:"):
             if line.find("PAC") != -1:
@@ -28,7 +28,9 @@ def parse_file(filename):
             pearsons = pearsons.group()
             pearsons = pearsons.strip()
             data[1].append(pearsons)
-        if line.startswith("")
+        if line.startswith("Neuron Size:"):
+            idx = line.find(":") + 1
+            size = [idx::]
     result = list(zip(data[0],data[1])) 
     return result
 list_of_files = ["drg_con_nalcn_data","drg_pac_fam155a","drg_pac_nalcn","drg-con-fam_coloc_data"]
