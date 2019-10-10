@@ -13,7 +13,7 @@ directory = dir+ttl
 function colocFunct(neuronsize,d,c1,c2,c3,c4)
 {
 i = 1;
-p = 3; //p designates the number of puncta to be collected per image
+p = 5; //p designates the number of puncta to be collected per image
 close();
 print(neuronsize)
 for(i = 0; i < p; i++){
@@ -25,7 +25,7 @@ for(i = 0; i < p; i++){
        selectWindow(c2);
        selectWindow(c3);
        selectWindow(c4);
-       selectWindow(c2);//change the following select if general marker channel is not channel 2
+       selectWindow(c3);//change the following select if general marker channel is not channel 3
        run("Scale Bar...", "width=50 height=4 font=14 color=White background=None location=[Lower Left] bold overlay");
        waitForUser;
        run("Enhance Contrast", "saturated=0.1");//increases contrast and saturation may not be needed
