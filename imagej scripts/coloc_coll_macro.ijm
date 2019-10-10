@@ -3,7 +3,6 @@ function colocFunct(neuronsize,nscale,d,c1,c2,c3,c4)
 open(d);
 p = 5; //p designates the number of puncta to be collected per image
 close();
-print(neuronsize)
 for(i = 0; i < p; i++){
 
        open(d);
@@ -22,7 +21,7 @@ for(i = 0; i < p; i++){
        close(c2);
        close(c3);
        close(c4);
-
+       print("Neuron Size Class:"+neuronsize+"")
        }
 }
 

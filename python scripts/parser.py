@@ -28,6 +28,7 @@ def parse_file(filename):
             pearsons = pearsons.group()
             pearsons = pearsons.strip()
             data[1].append(pearsons)
+        if line.startswith("")
     result = list(zip(data[0],data[1])) 
     return result
 list_of_files = ["drg_con_nalcn_data","drg_pac_fam155a","drg_pac_nalcn","drg-con-fam_coloc_data"]
